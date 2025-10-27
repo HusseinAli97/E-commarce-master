@@ -56,7 +56,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "# Route Academy This repository contains an E-Commerce web application developed using React.js and styled with Bootstrap. It includes both the frontend and a backend mock database. The project aims to provide a basic structure for an online store, showcasing how to create product listings, add items to a shopping cart, and simulate a checkout process. - **The link of deploying** : ```https://e-commarce-vg2i.onrender.com/```",
+  "description": "# Route Academy This repository contains an E-Commerce web application developed using React.js and styled with Bootstrap. It includes both the frontend and a backend mock database. The project aims to provide a basic structure for an online store, showcasing how to create product listings, add items to a shopping cart, and simulate a checkout process. - **The link of deploying** : ```https://ecommerce.routemisr.com/```",
   "main": "index.js",
   "author": "",
   "license": "ISC"

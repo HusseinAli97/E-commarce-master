@@ -32,7 +32,7 @@ export default function SignUp({ switchToLoginForm }) {
             try {
                 // make API request to sign up
                 setIsLoading(true);
-                const response = await axios.post('https://route-ecommerce.onrender.com/api/v1/auth/signup', values);
+                const response = await axios.post('https://ecommerce.routemisr.com/api/v1/auth/signup', values);
                 // successful registration 
                 setIsLoading(false);
                 toast.success("Registration successful", { position: "top-center", autoClose: 1500 ,theme: 'colored'});

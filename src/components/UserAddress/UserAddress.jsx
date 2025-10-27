@@ -39,7 +39,7 @@ export default function UserAddress() {
         validationSchema,
         onSubmit: async (values) => {
             try {
-                let response = await axios.post('https://route-ecommerce.onrender.com/api/v1/addresses', values, { headers });
+                let response = await axios.post('https://ecommerce.routemisr.com/api/v1/addresses', values, { headers });
                 toast.success('Address added successfully!', { position: 'top-center', autoClose: 1500 });
                 formik.resetForm();
                 setAddresses(response.data.data);
@@ -114,7 +114,7 @@ export default function UserAddress() {
     }
     async function getAddresses() {
         try {
-            const response = await axios.get('https://route-ecommerce.onrender.com/api/v1/addresses', { headers });
+            const response = await axios.get('https://ecommerce.routemisr.com/api/v1/addresses', { headers });
             setAddresses(response?.data?.data);
             setCurrantAddress(response?.data?.data[response.data.data.length - 1]?._id);
         } catch (error) {
@@ -126,7 +126,7 @@ export default function UserAddress() {
     }, [])
     async function deleteAddress(id) {
         try {
-            let response = await axios.delete(`https://route-ecommerce.onrender.com/api/v1/addresses/${id}`, { headers });
+            let response = await axios.delete(`https://ecommerce.routemisr.com/api/v1/addresses/${id}`, { headers });
             toast.success('Address deleted successfully!', { position: 'top-center', autoClose: 1500 });
             setAddresses(response.data.data);
             setAddressRequierd(true);
@@ -135,7 +135,7 @@ export default function UserAddress() {
         }
     }
     async function getCurrentAddress() {
-        let res = await axios.get(`https://route-ecommerce.onrender.com/api/v1/addresses/${currantAddress}`,{
+        let res = await axios.get(`https://ecommerce.routemisr.com/api/v1/addresses/${currantAddress}`,{
             headers:{
                 token: localStorage.getItem('userToken')
             }
